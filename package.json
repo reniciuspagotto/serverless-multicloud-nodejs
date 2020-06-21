@@ -1,5 +1,5 @@
 {
-  "name": "serverless-multicloud-service",
+  "name": "serverless-multicloud-nodejs",
   "version": "1.0.0",
   "description": "",
   "main": "handler.js",
