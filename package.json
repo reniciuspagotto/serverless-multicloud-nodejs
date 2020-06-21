@@ -1,0 +1,19 @@
+{
+  "name": "serverless-multicloud-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Renicius Pagotto Fostaini and Ana Carolina Manzan",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-express": "^2.0.11"
+  },
+  "devDependencies": {
+    "serverless-azure-functions": "^2.0.9",
+    "serverless-google-cloudfunctions": "^2.4.3"
+  }
+}

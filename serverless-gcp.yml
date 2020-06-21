@@ -1,0 +1,19 @@
+service: serverless-multicloud-service
+provider:
+  name: google
+  runtime: nodejs10
+  region: us-central1
+  project: general-study
+  credentials: C:\Users\renic\.gcloud\keyfile.json
+plugins:
+  - serverless-google-cloudfunctions
+  - serverless-express
+package:
+  exclude:
+    - .gitignore
+    - .git/**
+functions:
+  app:
+    handler: handler
+    events:
+      - http: path

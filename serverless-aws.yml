@@ -1,0 +1,18 @@
+service: serverless-multicloud-service
+provider:
+  name: aws
+  runtime: nodejs10.x
+  region: sa-east-1
+plugins:
+  - serverless-express
+package:
+  exclude:
+    - .gitignore
+    - .git/**
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http:
+          path: api/tdc
+          method: GET
