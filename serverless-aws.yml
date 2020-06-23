@@ -1,4 +1,4 @@
-service: serverless-multicloud-service
+service: serverless-multicloud-nodejs
 provider:
   name: aws
   runtime: nodejs10.x

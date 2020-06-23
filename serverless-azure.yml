@@ -1,0 +1,23 @@
+service: serverless-multicloud-nodejs
+provider:
+  name: azure
+  location: Brazil South
+  runtime: nodejs10
+plugins:
+  - serverless-azure-functions
+  - serverless-express
+package:
+  exclude:
+    - local.settings.json
+    - .gitignore
+    - .git/**
+functions:
+  tdc:
+    handler: handler.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+          name: req
+          methods:
+            - get

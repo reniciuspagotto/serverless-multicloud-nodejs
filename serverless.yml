@@ -1,27 +1,19 @@
 service: serverless-multicloud-nodejs
 provider:
-  name: azure
-  location: Brazil South
+  name: google
   runtime: nodejs10
+  region: us-central1
+  project: pagotto-learn
+  credentials: C:\Users\renic\.gcloud\serverless-keyfile.json
 plugins:
-  - serverless-azure-functions
+  - serverless-google-cloudfunctions
   - serverless-express
 package:
   exclude:
-    - local.settings.json
     - .gitignore
     - .git/**
 functions:
-  tdc:
-    handler: handler.handler
+  app:
+    handler: handler
     events:
-      - http: true
-        x-azure-settings:
-          authLevel : anonymous
-          name: req
-          methods:
-            - get
-      - http: true
-        x-azure-settings:
-          direction: out
-          name: res
+      - http: path
