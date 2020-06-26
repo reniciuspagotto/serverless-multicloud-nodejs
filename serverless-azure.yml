@@ -1,7 +1,7 @@
 service: serverless-multicloud-nodejs
 provider:
   name: azure
-  location: Brazil South
+  region: Brazil South
   runtime: nodejs10
 plugins:
   - serverless-azure-functions
